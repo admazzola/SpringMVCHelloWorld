@@ -18,7 +18,20 @@ public class HelloController {
 
 	}
 
+	/*
 	@RequestMapping(value = "/hello/{name:.+}", method = RequestMethod.GET)
+	public ModelAndView hello(@PathVariable("name") String name) {
+
+		ModelAndView model = new ModelAndView();
+		model.setViewName("hello");
+		model.addObject("msg", name);
+
+		return model;
+
+	}*/
+	
+	
+	@RequestMapping(value = "/submitform", method = RequestMethod.POST)
 	public ModelAndView hello(@PathVariable("name") String name) {
 
 		ModelAndView model = new ModelAndView();
@@ -29,4 +42,6 @@ public class HelloController {
 
 	}
 
+	
+	
 }
